@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Count Remaining Days Until May 1st</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  h1 {
+    color: #333;
+  }
+
+  #daysLeft {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Days left:</h1>
+  <p id="daysLeft"></p>
+</div>
+
+<script>
+  // Get today's date
+  var today = new Date();
+
+  // Set May 1st
+  var mayFirst = new Date(today.getFullYear(), 4, 1); // Month is 0-indexed, so 4 represents May
+
+  // Calculate the difference in milliseconds
+  var differenceMs = mayFirst - today;
+
+  // Convert milliseconds to days
+  var daysUntilMayFirst = Math.ceil(differenceMs / (1000 * 60 * 60 * 24));
+
+  // Display the result on the HTML page
+  document.getElementById("daysLeft").textContent = "Days remaining until May 1st: " + daysUntilMayFirst;
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation</title>
+    <link rel="icon" type="x-icon" href="images.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img class="imge" src="images.jpg">
+        <h1 class="h"><span>Wedding</span> Invetation</h1>
+        <div class="inv">
+            <h2>sneha sanon &#128157</pre>sourav sharma</h2>
+        </div>
+        <div class="details">
+            <p>are getting married</p>
+            <pre><em>date:</em> may 1st 2024</pre>
+            <pre><em>muhurtham:</em> 4:00 am</pre>
+            <pre><em>reception:</em> 12:30 pm</pre>
+            <pre><em>venue:</em> west fort hotel, minerav mills compound,
+    magadi main rd rajajinagar,bangaluru.
+                                  </pre>
+        </div>
+        <div class="container">
+            <p id="daysLeft"></p>
+            <h4>Days Remaining</h4>
+          </div>
+    </div>
+    <script>
+  var today = new Date();
+  var mayFirst = new Date(today.getFullYear(), 4, 1);
+  var differenceMs = mayFirst - today;
+  var daysUntilMayFirst = Math.ceil(differenceMs / (1000 * 60 * 60 * 24));
+  document.getElementById("daysLeft").textContent=""+ daysUntilMayFirst;
+</script>
+</body>
+</html>
